@@ -94,10 +94,35 @@
 									<a href="https://www.figma.com/proto/ShOHxwocMnqvzMhZeM7glw/Gnathic-Click?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank" class="button small">View Prototype</a>
                                 </dd>
                             </dl>
+							<br>
+
+							<center>
+								<h3>Testimonial</h3>
+								<blockquote>"In brief, having Adi on board was one of the best experiences that both Toothprints and myself personally, have had in working with advanced computer science interns."<br>- David A Tesini DMD MS <br>&nbsp;President Toothprints, Inc.</blockquote>
+								<a id="toggle_test_button" class="button small" onclick="toggle()">View Recommendation Letter</a>
+							</center>
+							<div id="toggle_test" style="display: none;">
+								<br>
+								<iframe src="images/Toothprints_recommendation_letter.pdf" frameborder="0" width="100%" height="800" style="position: relative; overflow: hidden;"></iframe>
+							</div>
                         </section>
 
 					</div>
-
+					<script>
+						var init = false;
+						function toggle() {
+							if(!init) {
+								document.getElementById("toggle_test").style.display = "contents";
+								document.getElementById("toggle_test_button").innerHTML = "Hide Recommendation Letter";
+								init = true;
+							}
+							else {
+								document.getElementById("toggle_test").style.display = "none";
+								document.getElementById("toggle_test_button").innerHTML = "View Recommendation Letter";
+								init = false;
+							}
+						}
+					</script>
 				<!-- Footer -->
 				<footer id="footer">
 					<section class="split contact">
